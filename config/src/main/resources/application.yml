@@ -31,8 +31,8 @@ security:
   user:
     name: rrtx
     password: rrtx
-#  basic:
-#    enabled: false
+  basic:
+    enabled: true
 
 encrypt:
   key-store:
