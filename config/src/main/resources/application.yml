@@ -9,11 +9,11 @@ spring:
     config:
       server:
         git:
-          uri: http://192.168.70.164:8080/SpringCloudDemo/SpringCloud.git
+          uri: https://github.com/zackor/spring-cloud/
 #          uri: http://124.204.54.214:8080/SpringCloudDemo/SpringCloud.git
           search-paths: config-repo
-          username: '{cipher}AQAAuZ0yDsQgYMcY0HosMtXigLAPXLRSyCWquv1h1xmqLwwjM3L7apPOWHWkK6yw3m0pY2cg+6yU2XdXNW5qPUIy4p2mBAsjkzDD/GmyHyYW8xFgLNGO3i7ol1ytwEw0N3rCM2Uys9cP9J5ESR9trG59gu36XWhaeGIIPa5ZpGfOKHzHp/2+2SY2rQjE6INUJmb5yaTN7o7UiC8bsszP7774ElxSlYAZ/0r+BitEV+yv64Izan7ECkhWtE/mlLbfHXPYlL/x+SEpnUTQ9eOLNmcbvR1L6HQQvfUQH86hrpFCw+Mvk/+k5/o3CZUc8BpYSRGw/rAbKh3dBaaqPxoDruZrWvR6UU+d9TdF1pnpBpKBXWi/ohmyuiVPlyfWcTYRbk8='
-          password: '{cipher}AQBBWYscp/AnE3+sfTsXVxbrG6WEnOTdJXdlAseGb7bfGXygBdFmyo8zuuv4k9ZhQGzF2O4ZrDjncRYt1AKtWGnxkKgwUtlgWFlqV99iOSquGwbLmEsUWCVdvDVh0H8hWL4okdjvaCHjBjI5k0L3n/msiO2bxFxRVjz7Oj7iHnvNoAikay6Yd9Rv4ZTvnS15QFIkeYjCIcoWa6NKsLDFm4WbAA1NYIqhhIVze7uSPuGIKFEMZ0R7BXE1phLqEqVJfZR1wyuxX9x2vsRS6iD/wseLor4AR2o4/u7VsNr5uKwUi7yHGT439N0QVf0spDsQagI+2RG03AyFoIIaIptv3pY7e6axg2nvte4+gmeDFb0oCWy10623elHRldpTINvS0R8='
+#          username: '{cipher}AQAAuZ0yDsQgYMcY0HosMtXigLAPXLRSyCWquv1h1xmqLwwjM3L7apPOWHWkK6yw3m0pY2cg+6yU2XdXNW5qPUIy4p2mBAsjkzDD/GmyHyYW8xFgLNGO3i7ol1ytwEw0N3rCM2Uys9cP9J5ESR9trG59gu36XWhaeGIIPa5ZpGfOKHzHp/2+2SY2rQjE6INUJmb5yaTN7o7UiC8bsszP7774ElxSlYAZ/0r+BitEV+yv64Izan7ECkhWtE/mlLbfHXPYlL/x+SEpnUTQ9eOLNmcbvR1L6HQQvfUQH86hrpFCw+Mvk/+k5/o3CZUc8BpYSRGw/rAbKh3dBaaqPxoDruZrWvR6UU+d9TdF1pnpBpKBXWi/ohmyuiVPlyfWcTYRbk8='
+#          password: '{cipher}AQBBWYscp/AnE3+sfTsXVxbrG6WEnOTdJXdlAseGb7bfGXygBdFmyo8zuuv4k9ZhQGzF2O4ZrDjncRYt1AKtWGnxkKgwUtlgWFlqV99iOSquGwbLmEsUWCVdvDVh0H8hWL4okdjvaCHjBjI5k0L3n/msiO2bxFxRVjz7Oj7iHnvNoAikay6Yd9Rv4ZTvnS15QFIkeYjCIcoWa6NKsLDFm4WbAA1NYIqhhIVze7uSPuGIKFEMZ0R7BXE1phLqEqVJfZR1wyuxX9x2vsRS6iD/wseLor4AR2o4/u7VsNr5uKwUi7yHGT439N0QVf0spDsQagI+2RG03AyFoIIaIptv3pY7e6axg2nvte4+gmeDFb0oCWy10623elHRldpTINvS0R8='
 
     #consul注册中心配置
     consul:
@@ -23,7 +23,7 @@ spring:
       discovery:
         health-check-path: /health
         health-check-interval: 15s
-        health-check-timeout: 1s
+        health-check-timeout: 5s
 #  profiles:
 #    include: common-dev
 #页面访问时需要输入密码
@@ -31,7 +31,8 @@ security:
   user:
     name: rrtx
     password: rrtx
-
+#  basic:
+#    enabled: false
 
 encrypt:
   key-store:
