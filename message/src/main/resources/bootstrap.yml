@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: message
+  cloud:
+    #\u914D\u7F6E\u4E2D\u5FC3
+    config:
+      #config server\u7684\u8BBF\u95EEurl
+      uri: http://127.0.0.1:8888/
+      #\u9ED8\u8BA4\u4E3Adefault
+      profile: dev
+      #\u9ED8\u8BA4\u4E3Amaster
+      label: master
+      username: rrtx
+      password: rrtx
+management:
+  security:
+    enabled: false

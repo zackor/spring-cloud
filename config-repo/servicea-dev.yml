@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: server1
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: /
+        healthCheckInterval: 5s
+server:
+  port: 8082
