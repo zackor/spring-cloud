@@ -16,7 +16,7 @@ spring:
       password: rrtx
       label: master
       profile: dev
-      enabled: false
+      enabled: true
 server:
   port: 0
 

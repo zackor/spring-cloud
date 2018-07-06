@@ -6,3 +6,4 @@ spring:
       port: 8500
 server:
   port: 8083
+foo: helloWorld

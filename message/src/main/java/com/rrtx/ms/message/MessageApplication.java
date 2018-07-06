@@ -23,11 +23,13 @@ public class MessageApplication {
 	@Value("${spring.cloud.consul.discovery.instance-id}")
 //	@Value("${local.server.port}")
 	private String port;
+	@Value("${foo:defaultValue}")
+	private String foo;
 	@GetMapping("/sendMail")
 	public String hello(@RequestParam(value = "name")String name,
 						@RequestParam(value = "msg")String msg) {
 		System.out.printf("sending mail to %s \n",name);
-		return String.format("my port:%s,send %s -->%s",port,name,msg);
+		return String.format("my instance-id:%s, foo = %s send %s -->%s",port,foo,name,msg);
 	}
 
 }

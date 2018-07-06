@@ -23,7 +23,7 @@
 - Consul注册中心生成集群配置
 
 ## 思路
-- 通过WEB界面控制Config配置文件来实现各种参数的控制，已实现各种功能（负载均衡/限流/降级/容错/熔断/路由）
+- 通过WEB界面控制Config配置文件来实现各种参数的控制，以实现各种功能（负载均衡/限流/降级/容错/熔断/路由）
 - 通过Spring Bus实现Config配置自动刷新（需要用到Git webhook）
 - Spring Bus 有[局部刷新功能](http://www.itmuch.com/spring-cloud/spring-cloud-bus-auto-refresh-configuration/)，可配合路由配置功能实现灰度发布
 - 实现WEB界面控制参数功能，需要人工梳理出各个配置文件中配置KEY与各种功能的内部逻辑
