@@ -21,9 +21,11 @@ spring:
       port: 8500
       enabled: true
       discovery:
-        health-check-path: /health
+        health-check-path: /
         health-check-interval: 15s
-        health-check-timeout: 5s
+        health-check-timeout: 10s
+        instance-zone:
+
 #  profiles:
 #    include: common-dev
 #页面访问时需要输入密码
@@ -32,7 +34,7 @@ security:
     name: rrtx
     password: rrtx
   basic:
-    enabled: true
+    enabled: false
 
 encrypt:
   key-store:

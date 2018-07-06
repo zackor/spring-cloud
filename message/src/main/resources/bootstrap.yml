@@ -1,15 +1,22 @@
 spring:
   application:
-    name: message
-
+      name: message
   cloud:
-      config:
-        uri: http://127.0.0.1:8888
-        fail-fast: true
-        username: rrtx
-        password: rrtx
-        label: master
-        profile: dev
+    consul:
+      host: 127.0.0.1
+      port: 8500
+    config:
+      uri: http://127.0.0.1:8888
+      fail-fast: true
+      username: rrtx
+      password: rrtx
+      label: master
+      profile: dev
+      enabled: false
+server:
+  port: 8083
+
+
 management:
   security:
     enabled: false
