@@ -1,6 +1,6 @@
 spring:
   application:
-    name: transfer
+    name: adm
   thymeleaf:
     cache: false
     mode: HTML
