@@ -13,4 +13,4 @@ server:
 management:
   security:
     enabled: false
-foo: helloWorld
+foo: helloJava
