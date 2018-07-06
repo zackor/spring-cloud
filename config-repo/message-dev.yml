@@ -18,4 +18,4 @@ server:
 management:
   security:
     enabled: false
-foo: helloSpringBus
+foo: helloWorld
