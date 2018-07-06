@@ -3,7 +3,7 @@ spring:
     name: adm
   thymeleaf:
     cache: false
-    mode: HTML
+    mode: HTML5
   cloud:
     consul:
       host: 127.0.0.1
