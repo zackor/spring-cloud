@@ -25,11 +25,11 @@ spring:
         health-check-interval: 15s
         health-check-timeout: 10s
         instance-zone:
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 #  profiles:
 #    include: common-dev
 #页面访问时需要输入密码
