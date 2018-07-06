@@ -20,7 +20,8 @@ public class MessageApplication {
 		SpringApplication.run(MessageApplication.class, args);
 	}
 
-	@Value("${server.port}")
+	@Value("${spring.cloud.consul.discovery.instance-id}")
+//	@Value("${local.server.port}")
 	private String port;
 	@GetMapping("/sendMail")
 	public String hello(@RequestParam(value = "name")String name,

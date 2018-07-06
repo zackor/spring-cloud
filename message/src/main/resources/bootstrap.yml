@@ -1,3 +1,4 @@
+
 spring:
   application:
       name: message
@@ -5,6 +6,9 @@ spring:
     consul:
       host: 127.0.0.1
       port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${random.int}
+
     config:
       uri: http://127.0.0.1:8888
       fail-fast: true
@@ -14,7 +18,7 @@ spring:
       profile: dev
       enabled: false
 server:
-  port: 8085
+  port: 0
 
 
 management:
