@@ -12,3 +12,5 @@ spring:
 management:
   security:
     enabled: false
+ribbon:
+  MaxAutoRetriesNextServer: 15
