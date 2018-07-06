@@ -1,9 +1,16 @@
 
 spring:
+  application:
+      name: message
   cloud:
     consul:
       host: 127.0.0.1
       port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${random.int}
 server:
-  port: 8083
+  port: 0
+management:
+  security:
+    enabled: false
 foo: helloWorld
