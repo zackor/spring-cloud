@@ -4,7 +4,5 @@ spring:
     consul:
       host: 127.0.0.1
       port: 8500
-  profiles:
-      include: common-dev
 server:
   port: 8083

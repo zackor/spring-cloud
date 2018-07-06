@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: transfer
+  thymeleaf:
+    cache: false
+    mode: HTML
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+server:
+  port: 9000
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript

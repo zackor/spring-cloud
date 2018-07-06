@@ -1,6 +1,6 @@
 spring:
   application:
-    name: message
+    name: adm
   cloud:
       config:
         uri: http://127.0.0.1:8888
