@@ -2,6 +2,13 @@ package com.rrtx.ms.adm.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * ClassName: IndexController<br>
@@ -13,6 +20,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class IndexController {
+    private RestTemplate restTemplate = new RestTemplate();
+    Pattern p = Pattern.compile("Services(.*)Checks");
+
     @GetMapping("/")
     public String home() {
         return "index";
@@ -26,5 +36,43 @@ public class IndexController {
     @GetMapping("/feign")
     public String feign() {
         return "feign";
+    }
+
+    @GetMapping("/addPara")
+    public String addPara() {
+        return "addPara";
+    }
+
+    @GetMapping("/refreshSvr")
+    public String refreshSvr() {
+        return "refreshSvr";
+    }
+
+    @GetMapping("/serviceList")
+    public String serviceList() {
+        return "serviceList";
+    }
+
+    @GetMapping("/serviceListAjax")
+    @ResponseBody
+    public String serviceListAjax() {
+        String s = restTemplate.getForObject("http://127.0.0.1:8500/v1/internal/ui/services?dc=dc1", String.class, new HashMap());
+        return s;
+    }
+
+    @PostMapping("/mytrace")
+    @ResponseBody
+    public String mytrace() {
+        String s = restTemplate.getForObject("http://127.0.0.1:8888/trace", String.class, new HashMap());
+        return s;
+    }
+
+    @PostMapping("/myrefresh")
+    @ResponseBody
+    public String myrefresh(String destination) {
+        Map m = new HashMap<String, String>();
+        m.put("destination", destination);
+        String s = restTemplate.postForObject("http://127.0.0.1:8888/bus/refresh", m, String.class);
+        return s;
     }
 }
