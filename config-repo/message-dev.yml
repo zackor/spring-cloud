@@ -2,12 +2,6 @@
 spring:
   application:
       name: message
-  cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-      discovery:
-        instance-id: ${spring.application.name}-${random.int}
   rabbitmq:
       host: 127.0.0.1
       port: 5672
