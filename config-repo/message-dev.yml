@@ -1,15 +1,4 @@
-
 spring:
   application:
       name: message
-  rabbitmq:
-      host: 127.0.0.1
-      port: 5672
-      username: guest
-      password: guest
-server:
-  port: 0
-management:
-  security:
-    enabled: false
 foo: helloWorld

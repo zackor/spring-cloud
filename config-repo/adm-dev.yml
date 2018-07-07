@@ -4,10 +4,6 @@ spring:
   thymeleaf:
     cache: false
     mode: HTML5
-  cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
 server:
   port: 9000
   compression:
