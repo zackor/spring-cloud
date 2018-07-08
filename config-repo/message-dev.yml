@@ -1,7 +1,4 @@
 spring:
   application:
       name: message
-  boot:
-    admin:
-      url: http://localhost:8080
 foo: helloWorld
