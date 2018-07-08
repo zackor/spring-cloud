@@ -1,5 +1,8 @@
 #public config file
 spring:
+ boot:
+    admin:
+      url: http://localhost:8400
   cloud:
     consul:
       host: 127.0.0.1
