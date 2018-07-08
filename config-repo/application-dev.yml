@@ -44,4 +44,4 @@ hystrix:
             #熔断超时时间
             timeoutInMilliseconds: 10000
 info:
-  version: @project.version@
+  version: 1.0-SNAPSHOT
