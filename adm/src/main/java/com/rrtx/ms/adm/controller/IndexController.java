@@ -47,6 +47,10 @@ public class IndexController {
     public String refreshSvr() {
         return "refreshSvr";
     }
+    @GetMapping("/monitor")
+    public String monitor() {
+        return "monitor";
+    }
 
     @GetMapping("/serviceList")
     public String serviceList() {

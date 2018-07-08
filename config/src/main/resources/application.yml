@@ -5,6 +5,9 @@ server:
 spring:
   application:
     name: config-server
+  boot:
+    admin:
+      url: http://localhost:8400
   cloud:
     config:
       server:

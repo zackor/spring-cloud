@@ -10,6 +10,3 @@ spring:
       label: master
       profile: dev
       enabled: true
-  boot:
-    admin:
-      url: http://localhost:8080
