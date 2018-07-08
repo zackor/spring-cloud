@@ -4,6 +4,6 @@ spring:
   boot:
     admin:
       routes:
-        url: http://localhost:8300
+        url: http://localhost:8080
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
 foo: helloWorld
