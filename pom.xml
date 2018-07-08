@@ -23,6 +23,7 @@
         <module>adm</module>
         <module>message</module>
         <module>common-api</module>
+        <module>monitor</module>
     </modules>
 
     <properties>
@@ -32,6 +33,7 @@
         <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.0.5</thymeleaf-layout-dialect.version>
+        <spring-admin.version>1.5.7</spring-admin.version>
     </properties>
 
     <dependencies>
@@ -39,6 +41,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,7 +77,21 @@
                 <artifactId>thymeleaf-layout-dialect</artifactId>
                 <version>${thymeleaf-layout-dialect.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
+                <version>${spring-admin.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -41,7 +41,7 @@ public class MailController {
      * 方法描述：断路器的应用
      */
     @Bean
-    public MailService getMailServiceFallBack() {
+    public MailServiceFallBack getMailServiceFallBack() {
         return new MailServiceFallBack();
     }
 }

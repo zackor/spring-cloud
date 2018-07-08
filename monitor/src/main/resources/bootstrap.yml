@@ -1,6 +1,6 @@
 spring:
   application:
-      name: message
+      name: monitor
   cloud:
     config:
       uri: http://127.0.0.1:8888
@@ -10,6 +10,4 @@ spring:
       label: master
       profile: dev
       enabled: true
-  boot:
-    admin:
-      url: http://localhost:8080
+
