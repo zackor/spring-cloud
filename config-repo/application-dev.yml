@@ -1,6 +1,6 @@
 #public config file
 spring:
- boot:
+  boot:
     admin:
       url: http://localhost:8400
   cloud:
