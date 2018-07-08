@@ -3,7 +3,7 @@ spring:
     name: adm
   thymeleaf:
     cache: false
-    mode: HTML5
+    mode: HTML
 server:
   port: 9000
   compression:
