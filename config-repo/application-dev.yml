@@ -11,11 +11,6 @@ spring:
       port: 5672
       username: guest
       password: guest
-  boot:
-    admin:
-      routes:
-        url: http://localhost:8300
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
 server:
   port: 0
 management:
