@@ -20,8 +20,8 @@ import java.util.regex.Pattern;
  */
 @Controller
 public class IndexController {
-    private RestTemplate restTemplate = new RestTemplate();
     Pattern p = Pattern.compile("Services(.*)Checks");
+    private RestTemplate restTemplate = new RestTemplate();
 
     @GetMapping("/")
     public String home() {

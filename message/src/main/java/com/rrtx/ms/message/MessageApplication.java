@@ -17,23 +17,29 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MessageApplication.class, args);
-	}
-
-	@Autowired
-	private EnvironmentManager env;
-	@Value("${spring.cloud.consul.discovery.instance-id}")
+    @Autowired
+    private EnvironmentManager env;
+    @Value("${spring.cloud.consul.discovery.instance-id}")
 //	@Value("${local.server.port}")
-	private String port;
-	@Value("${foo:defaultValue}")
-	private String foo;
-	@GetMapping("/sendMail")
-	public String hello(@RequestParam(value = "name")String name,
-						@RequestParam(value = "msg")String msg) {
-		System.out.printf("sending mail to %s \n",name);
-		String envStr =String.valueOf(env.getProperty(name));
-		return String.format("my instance-id:%s, foo = %s ,env = %s send %s -->%s",port,foo,envStr,name,msg);
-	}
+    private String port;
+    @Value("${foo:defaultValue}")
+    private String foo;
+
+    public static void main(String[] args) {
+        SpringApplication.run(MessageApplication.class, args);
+    }
+
+    @GetMapping("/sendMail")
+    public String hello(@RequestParam(value = "name") String name,
+                        @RequestParam(value = "msg") String msg) {
+        System.out.printf("sending mail to %s \n", name);
+        String envStr = String.valueOf(env.getProperty(name));
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return String.format("my instance-id:%s, foo = %s ,env = %s send %s -->%s", port, foo, envStr, name, msg);
+    }
 
 }

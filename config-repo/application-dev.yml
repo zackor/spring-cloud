@@ -30,6 +30,7 @@ ribbon:
   MaxAutoRetriesNextServer: 2
 # 对当前实例的重试次数
   MaxAutoRetries: 1
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
 hystrix:
   command:
     default:

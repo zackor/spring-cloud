@@ -12,3 +12,14 @@ spring:
 management:
   security:
     enabled: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            #熔断超时时间
+            timeoutInMilliseconds: 1000
+# 设置连接超时时间
+ribbon:
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule

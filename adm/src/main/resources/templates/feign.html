@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -31,11 +31,11 @@
                 </div>
             </div>
         </form>
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button class="layui-btn"  id="commit"  >立即提交</button>
-                </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" id="commit">立即提交</button>
             </div>
+        </div>
 
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
@@ -52,29 +52,29 @@
 <footer th:include="include :: footer"></footer>
 <script src="../layui/layui.js"></script>
 <script>
-    layui.use(['form', 'layedit', 'laydate','jquery',], function () {
+    layui.use(['form', 'layedit', 'laydate', 'jquery',], function () {
         var form = layui.form
-            , layer = layui.layer,$ = layui.jquery;
+            , layer = layui.layer, $ = layui.jquery;
 
 
-        var i =0;
+        var i = 0;
 
-        $("#commit").click(function(){
+        $("#commit").click(function () {
             $.ajax({
-                cache : false,
-                type : "POST",
-                url : "/sendMail2U",
-                data : $('#mailform').serialize(),// 你的formid
-                async : false,
-                error : function(request) {
+                cache: false,
+                type: "POST",
+                url: "/sendMail2U",
+                data: $('#mailform').serialize(),// 你的formid
+                async: false,
+                error: function (request) {
                     layer.msg(request);
 
                 },
-                success : function(data) {
+                success: function (data) {
                     i++;
                     var ostr = $("#msg1").val();
 
-                    $("#msg1").val(i+" "+data+"\n"+ostr);
+                    $("#msg1").val(i + " " + data + "\n" + ostr);
 
 
                 }
@@ -86,8 +86,6 @@
             "name": "xugz@bjrrtx.com"
             , "msg": "习大大说：撸起袖子加油干"
         });
-
-
 
 
     });

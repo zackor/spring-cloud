@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -24,12 +24,11 @@
                 </div>
             </div>
         </form>
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button class="layui-btn"  id="commit"  >立即提交</button>
-                </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" id="commit">立即提交</button>
             </div>
-
+        </div>
 
 
     </div>
@@ -38,30 +37,28 @@
 <footer th:include="include :: footer"></footer>
 <script src="../layui/layui.js"></script>
 <script>
-    layui.use(['form', 'layedit', 'laydate','jquery',], function () {
+    layui.use(['form', 'layedit', 'laydate', 'jquery',], function () {
         var form = layui.form
-            , layer = layui.layer,$ = layui.jquery;
+            , layer = layui.layer, $ = layui.jquery;
 
-        $("#commit").click(function(){
+        $("#commit").click(function () {
             var mydata = {};
-            mydata['destination']= $("#destination").val();
+            mydata['destination'] = $("#destination").val();
             $.ajax({
-                cache : false,
-                type : "POST",
-                url : "/myrefresh",
-                data : mydata,
-                async : false,
-                error : function(jqXHR, textStatus, errorThrown) {
+                cache: false,
+                type: "POST",
+                url: "/myrefresh",
+                data: mydata,
+                async: false,
+                error: function (jqXHR, textStatus, errorThrown) {
                     layer.msg("error");
 
                 },
-                success : function(data) {
+                success: function (data) {
                     layer.msg("success");
                 }
             });
         });
-
-
 
 
     });

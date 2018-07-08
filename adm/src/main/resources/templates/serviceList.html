@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,21 +18,21 @@
 <footer th:include="include :: footer"></footer>
 <script src="../layui/layui.js"></script>
 <script>
-    layui.use('table', function(){
+    layui.use('table', function () {
         var table = layui.table;
 
         table.render({
             elem: '#test'
-            ,url:'/serviceListAjax'
-            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-            ,cols: [
+            , url: '/serviceListAjax'
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [
                 [
-                {field:'Name', width:80, title: '服务名称', sort: true}
-                ,{field:'Tags', width:80, title: 'Tags'}
-                ,{field:'ChecksPassing', width:80, title: '性别', sort: true}
+                    {field: 'Name', width: 80, title: '服务名称', sort: true}
+                    , {field: 'Tags', width: 80, title: 'Tags'}
+                    , {field: 'ChecksPassing', width: 80, title: '性别', sort: true}
+                ]
             ]
-            ]
-            ,page: false
+            , page: false
         });
     });
 </script>
