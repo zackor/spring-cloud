@@ -3,5 +3,5 @@ spring:
       name: message
   boot:
     admin:
-      url: http://localhost:8300
+      url: http://localhost:8080
 foo: helloWorld
