@@ -17,7 +17,18 @@
 - [x]  配置文件中的启动端口如何进行随机数配置(已解决)
 - [ ]  集成Spring Bus实现Config Service 配置自动刷新
 - [ ]  如何通过Spring Bug 局部刷新
--  
+## 端口
+应用 | 工程 | 端口
+---|---|---
+注册中心 | Consul | 8500
+配置中心 | Config | 8888
+监控中心 | Monitor | 8400
+消息队列 | RabbitMq | 5672
+管理后台 | Adm | 9000
+链路跟踪 | Zipkin | 8600
+网关 | Gateway | 9999
+业务微服务 | XXXX | 随机端口
+
 ## 知识点
 - Config配置文件鉴权及加密
 - Consul注册中心生成集群配置
