@@ -1,0 +1,9 @@
+spring:
+  application:
+      name: gateway
+server:
+  port: 9999
+zuul:
+  ignored-services: '*'
+  routes:
+    message: /mail/**
