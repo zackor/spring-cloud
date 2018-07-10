@@ -56,6 +56,10 @@ public class IndexController {
     public String serviceList() {
         return "serviceList";
     }
+@GetMapping("/zipkin")
+    public String zipkin() {
+        return "zipkin";
+    }
 
     @GetMapping("/serviceListAjax")
     @ResponseBody

@@ -1,3 +1,11 @@
 spring:
   application:
-      name: gateway
+    name: gateway
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      fail-fast: true
+      username: rrtx
+      password: rrtx
+      label: master
+      profile: dev

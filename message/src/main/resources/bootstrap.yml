@@ -10,3 +10,9 @@ spring:
       label: master
       profile: dev
       enabled: true
+  zipkin:
+    base-url: http://127.0.0.1:8600
+  sleuth:
+    sampler:
+      #收集百分比
+      percentage: 1

@@ -2,24 +2,16 @@ spring:
   application:
     name: adm
   cloud:
-      config:
-        uri: http://127.0.0.1:8888
-        fail-fast: true
-        username: rrtx
-        password: rrtx
-        label: master
-        profile: dev
-management:
-  security:
-    enabled: false
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            #熔断超时时间
-            timeoutInMilliseconds: 1000
-# 设置连接超时时间
-ribbon:
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
+    config:
+      uri: http://127.0.0.1:8888
+      fail-fast: true
+      username: rrtx
+      password: rrtx
+      label: master
+      profile: dev
+  zipkin:
+    base-url: http://localhost:8600
+  sleuth:
+      sampler:
+        #收集百分比
+        percentage: 1
